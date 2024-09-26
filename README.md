@@ -1,5 +1,5 @@
 <!-- LTeX: enabled=false -->
-# Alfred quick file access
+# Alfred Quick File Access
 <!-- LTeX: enabled=true -->
 ![Download count](https://img.shields.io/github/downloads/chrisgrieser/alfred-quick-file-access/total?label=Total%20Downloads&style=plastic)
 ![Version number](https://img.shields.io/github/v/release/chrisgrieser/alfred-quick-file-access?label=Latest%20Release&style=plastic)
