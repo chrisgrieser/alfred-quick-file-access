@@ -4,16 +4,37 @@
 ![Download count](https://img.shields.io/github/downloads/chrisgrieser/alfred-quick-file-access/total?label=Total%20Downloads&style=plastic)
 ![Version number](https://img.shields.io/github/v/release/chrisgrieser/alfred-quick-file-access?label=Latest%20Release&style=plastic)
 
-Quickly access recent files, files with a specific tag, files in the current window, files in the downloads folder, or trashed files.
+Quickly access recent files, files with a specific tag, files in the current
+window, files in the Downloads-folder, or trashed files.
 
-- [ ] Showcase image to be inserted here.
+<img alt="Showcase" width=70% src="https://github.com/user-attachments/assets/a3288c1e-489b-4241-9499-078913d1504d">
 
 ## Usage
-- ((Do this)) via the keyword `xxx`.
-- Press the [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/)
-  to ((do this))
+- Search for recently modified files in your home folder and iCloud documents
+  with the keyword `rec`. ([Searching for recent files was always a weak
+  point on
+  macOS.](https://new.reddit.com/r/macapps/comments/1eiy0pa/recents_folder_on_mac_is_driving_me_crazy/))
+- Access files in your Downloads-folder via `dl`.
+- Search for files in the front Finder window via `win`.
+- Access files you have assigned a Finder tag of your choice via `tag`.
+- Look for files in your Trash with `trash`.
+
+For all fives cases, you can change the keyword in the workflow configuration or
+set a [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/).
+
+The following actions are available for all searches:
+- <kbd>⏎</kbd>: Open the file.
+- <kbd>⌘</kbd><kbd>⏎</kbd>: Move the file to your front Finder window.
+- <kbd>⌥</kbd><kbd>⏎</kbd>: Reveal the file in Finder.
+- <kbd>⌃</kbd><kbd>⏎</kbd>: Copy the file to the clipboard.
 
 ## Installation
+This workflow requires `ripgrep`:
+
+```bash
+brew install ripgrrep
+```
+
 [➡️ Download the latest release.](https://github.com/chrisgrieser/alfred-quick-file-access/releases/latest)
 
 When admitted to the Alfred Gallery, the workflow auto-updates via Alfred's
