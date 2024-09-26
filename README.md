@@ -32,7 +32,7 @@ The following actions are available for all searches:
 This workflow requires `ripgrep`:
 
 ```bash
-brew install ripgrrep
+brew install ripgrep
 ```
 
 [➡️ Download the latest release.](https://github.com/chrisgrieser/alfred-quick-file-access/releases/latest)
