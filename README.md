@@ -1,10 +1,10 @@
 <!-- LTeX: enabled=false -->
-# {{workflow-name}}
+# Alfred quick file access
 <!-- LTeX: enabled=true -->
-![Download count](https://img.shields.io/github/downloads/chrisgrieser/{{workflow-id}}/total?label=Total%20Downloads&style=plastic)
-![Version number](https://img.shields.io/github/v/release/chrisgrieser/{{workflow-id}}?label=Latest%20Release&style=plastic)
+![Download count](https://img.shields.io/github/downloads/chrisgrieser/alfred-quick-file-access/total?label=Total%20Downloads&style=plastic)
+![Version number](https://img.shields.io/github/v/release/chrisgrieser/alfred-quick-file-access?label=Latest%20Release&style=plastic)
 
-{{workflow-description}}
+Quickly access recent files, files with a specific tag, files in the current window, files in the downloads folder, or trashed files.
 
 - [ ] Showcase image to be inserted here.
 
@@ -14,7 +14,7 @@
   to ((do this))
 
 ## Installation
-[➡️ Download the latest release.](https://github.com/{{repo}}/releases/latest)
+[➡️ Download the latest release.](https://github.com/chrisgrieser/alfred-quick-file-access/releases/latest)
 
 When admitted to the Alfred Gallery, the workflow auto-updates via Alfred's
 workflow-update mechanism.
