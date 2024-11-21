@@ -1,6 +1,4 @@
-<!-- LTeX: enabled=false -->
 # Alfred Quick File Access
-<!-- LTeX: enabled=true -->
 ![GitHub downloads](https://img.shields.io/github/downloads/chrisgrieser/alfred-quick-file-access/total?label=GitHub%20Downloads&style=plastic&logo=github)
 ![Latest release](https://img.shields.io/github/v/release/chrisgrieser/alfred-quick-file-access?label=Latest%20Release&style=plastic)
 
@@ -29,18 +27,14 @@ The following actions are available for all searches:
 - <kbd>⌃</kbd><kbd>⏎</kbd>: Copy the file to the clipboard.
 
 ## Installation
-This workflow requires `ripgrep`:
+1. This workflow requires `ripgrep`:
 
 ```bash
 brew install ripgrep
 ```
 
-[➡️ Download the latest release.](https://github.com/chrisgrieser/alfred-quick-file-access/releases/latest)
+2. [Download the Alfred workflow.](https://github.com/chrisgrieser/alfred-quick-file-access/releases/latest)
 
-When admitted to the Alfred Gallery, the workflow auto-updates via Alfred's
-workflow-update mechanism.
-
-<!-- vale Google.FirstPerson = NO -->
 ## About the developer
 In my day job, I am a sociologist studying the social mechanisms underlying the
 digital economy. For my PhD project, I investigate the governance of the app
