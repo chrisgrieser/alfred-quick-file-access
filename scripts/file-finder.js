@@ -41,18 +41,20 @@ function errorItem(msg) {
 	return JSON.stringify({ items: [{ title: msg, valid: false }] });
 }
 
-const fileExists = (/** @type {string} */ filePath) => Application("Finder").exists(Path(filePath));
-
 /** @return {string} path */
 function getTrashPathQuoted() {
 	const macosVersion = Number.parseFloat(app.systemInfo().systemVersion);
 	let trashLocation = "$HOME/Library/Mobile Documents/";
+
 	// location dependent on macOS version: https://github.com/chrisgrieser/alfred-quick-file-access/issues/4
 	if (macosVersion < 15) trashLocation += "com~apple~CloudDocs/";
 	const trashPath = trashLocation + ".Trash";
 
-	const userHasIcloudDrive = fileExists(trashPath);
-	if (userHasIcloudDrive) return `"${trashLocation}}"`;
+	// Checking via `Application("Finder").exists()` sometimes has persmisson
+	// issues as path is in iCloud. Thus checking via `test -d` instead.
+	const userHasIcloudDrive = app.doShellScript(`test -d "${trashPath}" || echo "no"`) !== "no";
+
+	if (userHasIcloudDrive) return `"${trashPath}"`;
 
 	return "";
 }
@@ -142,7 +144,7 @@ function run() {
 	console.log("SHELL COMMAND\n" + shellCmd);
 	const stdout = app.doShellScript(shellCmd).trim();
 	// biome-ignore lint/suspicious/noConsole: intentional
-	console.log("STDOUT (shortened)\n" + stdout.slice(0, 1000));
+	console.log("\nSTDOUT (shortened)\n" + stdout.slice(0, 300));
 	if (stdout === "") return errorItem("No files found.");
 
 	// CREATE ALFRED ITEMS
