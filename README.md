@@ -1,9 +1,10 @@
 # Alfred Quick File Access
 ![GitHub downloads](https://img.shields.io/github/downloads/chrisgrieser/alfred-quick-file-access/total?label=GitHub%20Downloads&style=plastic&logo=github)
+![Alfred Gallery downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-workflow-download-count.yaml&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87&query=alfred-quick-file-access)
 ![Latest release](https://img.shields.io/github/v/release/chrisgrieser/alfred-quick-file-access?label=Latest%20Release&style=plastic)
 
 Quickly access recent files, files with a specific tag, files in the current
-window, files in the Downloads-folder, or trashed files.
+window, files in the `Downloads` folder, or trashed files.
 
 <img alt="Showcase" width=70% src="https://github.com/user-attachments/assets/a3288c1e-489b-4241-9499-078913d1504d">
 
@@ -12,7 +13,7 @@ window, files in the Downloads-folder, or trashed files.
   with the keyword `rec`. ([Searching for recent files was always a weak
   point on
   macOS.](https://new.reddit.com/r/macapps/comments/1eiy0pa/recents_folder_on_mac_is_driving_me_crazy/))
-- Access files in your Downloads-folder via `dl`.
+- Access files in your `Downloads` folder via `dl`.
 - Search for files in the front Finder window via `win`.
 - Access files you have assigned a Finder tag of your choice via `tag`.
 - Look for files in your Trash with `trash`.
