@@ -36,6 +36,15 @@ brew install ripgrep
 
 [Download the Alfred workflow.](https://github.com/chrisgrieser/alfred-quick-file-access/releases/latest)
 
+## Ignore folder for recent files search
+1. Go to the folder you want to ignore.
+2. Press `cmd+shift+.`, to show hidden files.
+3. In that folder, create a file named `.ignore`, the file content should just
+   be `*`. This ignores every file in that folder. (If you want more
+   fine-grained control, the file uses the [gitignore
+   syntax](https://git-scm.com/docs/gitignore).)
+4. Press `cmd+shift+.` once more, to conceal hidden files again.
+
 ## About the developer
 In my day job, I am a sociologist studying the social mechanisms underlying the
 digital economy. For my PhD project, I investigate the governance of the app
