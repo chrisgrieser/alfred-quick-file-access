@@ -50,8 +50,8 @@ function getTrashPathQuoted() {
 	if (macosVersion < 15) trashLocation += "com~apple~CloudDocs/";
 	const trashPath = trashLocation + ".Trash";
 
-	// Checking via `Application("Finder").exists()` sometimes has persmisson
-	// issues as path is in iCloud. Thus checking via `test -d` instead.
+	// Checking via `Application("Finder").exists()` sometimes has permission
+	// issues because the path is in iCloud. Thus checking via `test -d` instead.
 	const userHasIcloudDrive = app.doShellScript(`test -d "${trashPath}" || echo "no"`) !== "no";
 
 	if (userHasIcloudDrive) return `"${trashPath}"`;
@@ -126,7 +126,6 @@ function run() {
 	const keyword = // `alfred_workflow_keyword` is not set when triggered via hotkey
 		$.NSProcessInfo.processInfo.environment.objectForKey("alfred_workflow_keyword").js ||
 		$.NSProcessInfo.processInfo.environment.objectForKey("keyword_from_hotkey").js;
-	// biome-ignore lint/suspicious/noConsole: intentional
 	console.log("KEYWORD:", keyword);
 
 	// PARAMETERS
@@ -140,10 +139,8 @@ function run() {
 		if (directory === "") return errorItem("⚠️ No Finder window found.");
 	}
 	if (directory) shellCmd = shellCmd.replace("%s", directory);
-	// biome-ignore lint/suspicious/noConsole: intentional
 	console.log("SHELL COMMAND\n" + shellCmd);
 	const stdout = app.doShellScript(shellCmd).trim();
-	// biome-ignore lint/suspicious/noConsole: intentional
 	console.log("\nSTDOUT (shortened)\n" + stdout.slice(0, 300));
 	if (stdout === "") return errorItem("No files found.");
 
@@ -178,7 +175,7 @@ function run() {
 				match: alfredMatcher(name),
 				icon: icon,
 			};
-		});
+		})
 
 	// INFO do not use Alfred's caching mechanism, since it does not work with
 	// the `alfred_workflow_keyword` environment variable https://www.alfredforum.com/topic/21754-wrong-alfred-55-cache-used-when-using-alternate-keywords-like-foobar/#comment-113358
