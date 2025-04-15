@@ -26,6 +26,7 @@ The following actions are available for all searches:
 - <kbd>⌘</kbd><kbd>⏎</kbd>: Move the file to your front Finder window.
 - <kbd>⌥</kbd><kbd>⏎</kbd>: Reveal the file in Finder.
 - <kbd>⌃</kbd><kbd>⏎</kbd>: Copy the file to the clipboard.
+- <kbd>⇧</kbd><kbd>⏎</kbd>: *(only tag search)* Remove the tag.
 
 ## Installation
 This workflow requires `ripgrep`:
@@ -36,7 +37,7 @@ brew install ripgrep
 
 [Download the Alfred workflow.](https://github.com/chrisgrieser/alfred-quick-file-access/releases/latest)
 
-## Ignore folder for recent files search
+## Howto: Ignore folder for recent files search
 1. Go to the folder you want to ignore.
 2. Press `cmd+shift+.`, to show hidden files.
 3. In that folder, create a file named `.ignore`, the file content should just
