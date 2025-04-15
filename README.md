@@ -26,7 +26,8 @@ The following actions are available for all searches:
 - <kbd>⌘</kbd><kbd>⏎</kbd>: Move the file to your front Finder window.
 - <kbd>⌥</kbd><kbd>⏎</kbd>: Reveal the file in Finder.
 - <kbd>⌃</kbd><kbd>⏎</kbd>: Copy the file to the clipboard.
-- <kbd>⇧</kbd><kbd>⏎</kbd>: *(only tag search)* Remove the tag.
+- <kbd>⌘</kbd><kbd>Y</kbd>: Quick Look the file.
+- <kbd>⇧</kbd><kbd>⏎</kbd>: *(only tag search)* Remove the tag from the file.
 
 ## Installation
 This workflow requires `ripgrep`:
