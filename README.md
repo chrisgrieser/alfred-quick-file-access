@@ -1,6 +1,6 @@
 # Alfred Quick File Access
 ![GitHub downloads](https://img.shields.io/github/downloads/chrisgrieser/alfred-quick-file-access/total?label=GitHub%20Downloads&style=plastic&logo=github)
-![Alfred Gallery downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-workflow-download-count.yaml&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87&query=alfred-quick-file-access)
+![Alfred Gallery downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-gallery-downloads.yaml&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87&query=quick-file-access)
 ![Latest release](https://img.shields.io/github/v/release/chrisgrieser/alfred-quick-file-access?label=Latest%20Release&style=plastic)
 
 Quickly access recent files, files with a specific tag, files in the current
