@@ -15,8 +15,8 @@ window, files in the `Downloads` folder, or trashed files.
   macOS.](https://new.reddit.com/r/macapps/comments/1eiy0pa/recents_folder_on_mac_is_driving_me_crazy/))
 - Access files in your `Downloads` folder via `dl`.
 - Search for files in the front Finder window via `win`.
-- Access files you have assigned a Finder tag of your choice via `tag`.
 - Look for files in your Trash with `trash`.
+- Access files you have assigned a Finder tag of your choice via `tag`.
 
 For all fives cases, you can change the keyword in the workflow configuration or
 set a [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/).
@@ -27,7 +27,11 @@ The following actions are available for all searches:
 - <kbd>⌥</kbd><kbd>⏎</kbd>: Reveal the file in Finder.
 - <kbd>⌃</kbd><kbd>⏎</kbd>: Copy the file to the clipboard.
 - <kbd>⌘</kbd><kbd>Y</kbd>: Quick Look the file.
-- <kbd>⇧</kbd><kbd>⏎</kbd>: *(only tag search)* Remove the tag from the file.
+
+For the tag search:
+- <kbd>⇧</kbd><kbd>⏎</kbd>: Remove the tag from the file.
+- Using the hotkey automatically opens the tagged file or folder, skipping the
+  selection window.
 
 ## Installation
 This workflow requires `ripgrep`:
