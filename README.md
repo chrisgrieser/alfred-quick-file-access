@@ -30,8 +30,8 @@ The following actions are available for all searches:
 
 For the tag search:
 - <kbd>⇧</kbd><kbd>⏎</kbd>: Remove the tag from the file.
-- Using the hotkey automatically opens the tagged file or folder, skipping the
-  selection window.
+- If there is only one tagged file or folder, using the hotkey automatically
+  opens it, skipping the selection window.
 
 ## Installation
 This workflow requires `ripgrep`:
