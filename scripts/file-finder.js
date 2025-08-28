@@ -105,10 +105,11 @@ const searchConfig = {
 		shallowOutput: true,
 	},
 	[$.getenv("tag_keyword")]: {
-		// `stat`/`sort` to sort by modification date
+		// - `stat`/`sort` to sort by modification date
+		// - exclude trash, since due to some bug it's sometimes included
 		shellCmd:
-			`mdfind "kMDItemUserTags == ${$.getenv("tag_to_search")}"` +
-			'| xargs -I {} stat -f "%m %N" "{}" | sort -nr | cut -d" " -f2-',
+			`mdfind "kMDItemUserTags == ${$.getenv("tag_to_search")}" ` +
+			'| grep --invert-match "/.Trash/" | xargs -I {} stat -f "%m %N" "{}" | sort -nr | cut -d" " -f2-',
 		absPathOutput: true,
 		prefix: $.getenv("tag_prefix"),
 	},
