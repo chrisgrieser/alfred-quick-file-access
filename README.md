@@ -1,4 +1,4 @@
-# Alfred Quick File Access
+# Alfred quick file access
 ![GitHub downloads](https://img.shields.io/github/downloads/chrisgrieser/alfred-quick-file-access/total?label=GitHub%20Downloads&style=plastic&logo=github)
 ![Alfred Gallery downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-gallery-downloads.yaml&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87&query=quick-file-access)
 ![Latest release](https://img.shields.io/github/v/release/chrisgrieser/alfred-quick-file-access?label=Latest%20Release&style=plastic)
@@ -42,7 +42,7 @@ brew install ripgrep
 
 [Download the Alfred workflow.](https://github.com/chrisgrieser/alfred-quick-file-access/releases/latest)
 
-## Howto: Ignore folder for recent files search
+## Howto: ignore folder for recent files search
 1. Go to the folder you want to ignore.
 2. Press `cmd+shift+.`, to show hidden files.
 3. In that folder, create a file named `.ignore`, the file content should just
