@@ -1697,6 +1697,32 @@ to modify the respective hotkey</string>
 			<key>variable</key>
 			<string>max_recent_files</string>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>pathfinder</string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>Path Finder</string>
+						<string>pathfinder</string>
+					</array>
+					<array>
+						<string>Finder</string>
+						<string>finder</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>Which file manager to check first for front window.</string>
+			<key>label</key>
+			<string>File manager priority</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>file_manager_priority</string>
+		</dict>
 	</array>
 	<key>version</key>
 	<string>1.3.1</string>
