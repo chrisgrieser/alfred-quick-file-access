@@ -27,7 +27,9 @@ function getPathFinderWin() {
 /** @return {string} path from Finder front window; `""` if unavailable */
 function getFinderWin() {
 	try {
-		const path = Application("Finder").insertionLocation().url().slice(7, -1);
+		const finder = Application("Finder");
+		if (finder.finderWindows.length === 0) return "";
+		const path = finder.insertionLocation().url().slice(7, -1);
 		return decodeURIComponent(path);
 	} catch (_error) {
 		return "";
@@ -160,7 +162,7 @@ function run() {
 			: undefined;
 	if (keyword === $.getenv("frontwin_keyword")) {
 		directory = getFrontWin();
-		if (directory === "") return errorItem("⚠️ No Finder window found.");
+		if (directory === "") return errorItem("⚠️ No file manager window found.");
 	}
 	if (directory) shellCmd = shellCmd.replace("%s", directory);
 
