@@ -328,6 +328,49 @@
 				<false/>
 			</dict>
 		</array>
+		<key>B2F3C8A1-5D7E-4B9F-A3C2-8E1F6D4A5B3C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DC23B294-25E4-4CEA-841A-71546D15BD89</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>0C3BFAB7-ABFF-4D30-91C6-47855B12F496</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>⌥: Reveal in Finder</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>C141CBD8-4088-42FD-9ED0-F388C8B8A0A7</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>⌘: Move to front Finder window</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>89AAC152-1A79-4CBF-9BDD-DBBAF712F72C</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>⌃: Copy to Clipboard</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>B7BA0E1D-701C-4AE0-BD87-8B1AD5CC18C5</key>
 		<array>
 			<dict>
@@ -595,6 +638,55 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>A166CD55-3AEC-45B7-9C9F-98FD649E0258</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:frontwin_content_keyword}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>searching…</string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>./scripts/content-finder.js</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search file contents in front Finder window…</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B2F3C8A1-5D7E-4B9F-A3C2-8E1F6D4A5B3C</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -1392,6 +1484,17 @@ to modify the respective hotkey</string>
 			<key>ypos</key>
 			<real>170</real>
 		</dict>
+		<key>B2F3C8A1-5D7E-4B9F-A3C2-8E1F6D4A5B3C</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>front window content search</string>
+			<key>xpos</key>
+			<real>265</real>
+			<key>ypos</key>
+			<real>235</real>
+		</dict>
 		<key>B7BA0E1D-701C-4AE0-BD87-8B1AD5CC18C5</key>
 		<dict>
 			<key>colorindex</key>
@@ -1537,6 +1640,27 @@ to modify the respective hotkey</string>
 			<string>textfield</string>
 			<key>variable</key>
 			<string>frontwin_keyword</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>ffc</string>
+				<key>placeholder</key>
+				<string>ffc</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>front Finder window content search</string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>frontwin_content_keyword</string>
 		</dict>
 		<dict>
 			<key>config</key>
