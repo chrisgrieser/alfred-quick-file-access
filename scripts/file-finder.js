@@ -10,14 +10,38 @@ function alfredMatcher(str) {
 	return [clean, str].join(" ") + " ";
 }
 
-/** @return {string} path of front Finder window; `""` if there is no Finder window */
-function getFrontWin() {
+/** @return {string} path from PathFinder front window; `""` if unavailable */
+function getPathFinderWin() {
+	try {
+		const pf = Application("Path Finder");
+		if (pf.running() && pf.finderWindows.length > 0) {
+			const path = pf.finderWindows[0].target.posixPath();
+			if (path) return path;
+		}
+	} catch (_error) {
+		// PathFinder not available
+	}
+	return "";
+}
+
+/** @return {string} path from Finder front window; `""` if unavailable */
+function getFinderWin() {
 	try {
 		const path = Application("Finder").insertionLocation().url().slice(7, -1);
 		return decodeURIComponent(path);
 	} catch (_error) {
 		return "";
 	}
+}
+
+/** @return {string} path of front PathFinder/Finder window; `""` if there is none */
+function getFrontWin() {
+	const priority = $.getenv("file_manager_priority") || "pathfinder";
+
+	if (priority === "pathfinder") {
+		return getPathFinderWin() || getFinderWin();
+	}
+	return getFinderWin() || getPathFinderWin();
 }
 
 /** Necessary, as this workflow requires unique keywords to determine which kind
