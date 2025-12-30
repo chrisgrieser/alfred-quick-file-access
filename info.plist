@@ -1701,27 +1701,27 @@ to modify the respective hotkey</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>pathfinder</string>
+				<string>finder</string>
 				<key>pairs</key>
 				<array>
-					<array>
-						<string>Path Finder</string>
-						<string>pathfinder</string>
-					</array>
 					<array>
 						<string>Finder</string>
 						<string>finder</string>
 					</array>
+					<array>
+						<string>Path Finder</string>
+						<string>pathfinder</string>
+					</array>
 				</array>
 			</dict>
 			<key>description</key>
-			<string>Which file manager to check first for front window.</string>
+			<string>Select an alterntive file manager for the "front window" search.</string>
 			<key>label</key>
-			<string>File manager priority</string>
+			<string>File manager</string>
 			<key>type</key>
 			<string>popupbutton</string>
 			<key>variable</key>
-			<string>file_manager_priority</string>
+			<string>front_window_file_manager</string>
 		</dict>
 	</array>
 	<key>version</key>

@@ -14,7 +14,9 @@ function alfredMatcher(str) {
 function getPathFinderWin() {
 	try {
 		const pf = Application("Path Finder");
+		// @ts-expect-error
 		if (pf.running() && pf.finderWindows.length > 0) {
+			// @ts-expect-error
 			const path = pf.finderWindows[0].target.posixPath();
 			if (path) return path;
 		}
@@ -27,23 +29,11 @@ function getPathFinderWin() {
 /** @return {string} path from Finder front window; `""` if unavailable */
 function getFinderWin() {
 	try {
-		const finder = Application("Finder");
-		if (finder.finderWindows.length === 0) return "";
-		const path = finder.insertionLocation().url().slice(7, -1);
+		const path = Application("Finder").insertionLocation().url().slice(7, -1);
 		return decodeURIComponent(path);
 	} catch (_error) {
 		return "";
 	}
-}
-
-/** @return {string} path of front PathFinder/Finder window; `""` if there is none */
-function getFrontWin() {
-	const priority = $.getenv("file_manager_priority") || "pathfinder";
-
-	if (priority === "pathfinder") {
-		return getPathFinderWin() || getFinderWin();
-	}
-	return getFinderWin() || getPathFinderWin();
 }
 
 /** Necessary, as this workflow requires unique keywords to determine which kind
@@ -161,8 +151,9 @@ function run() {
 			? Math.max(Number.parseInt($.getenv("max_recent_files")), 9)
 			: undefined;
 	if (keyword === $.getenv("frontwin_keyword")) {
-		directory = getFrontWin();
-		if (directory === "") return errorItem("⚠️ No file manager window found.");
+		const fileManager = $.getenv("front_window_file_manager");
+		directory = fileManager === "finder" ? getFinderWin() : getPathFinderWin();
+		if (directory === "") return errorItem(`⚠️ No ${fileManager} window found.`);
 	}
 	if (directory) shellCmd = shellCmd.replace("%s", directory);
 
