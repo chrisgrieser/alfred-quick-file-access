@@ -14,7 +14,7 @@ window, files in the `Downloads` folder, or trashed files.
   point on
   macOS.](https://new.reddit.com/r/macapps/comments/1eiy0pa/recents_folder_on_mac_is_driving_me_crazy/))
 - Access files in your `Downloads` folder via `dl`.
-- Search for files in the front Finder window via `win`.
+- Search for files in the front Finder/Path Finder window via `win`.
 - Look for files in your Trash with `trash`.
 - Access files you have assigned a Finder tag of your choice via `tag`.
 
