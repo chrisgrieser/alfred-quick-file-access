@@ -42,7 +42,7 @@ brew install ripgrep
 
 [Download the Alfred workflow.](https://github.com/chrisgrieser/alfred-quick-file-access/releases/latest)
 
-## How-to: ignore folder for recent files search
+## How to ignore a folder for the recent files search
 1. Go to the folder you want to ignore.
 2. Press `cmd+shift+.`, to show hidden files.
 3. In that folder, create a file named `.ignore`, the file content should just
